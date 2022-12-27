@@ -132,7 +132,7 @@ button:hover {
 
     .lft {
         border-radius: 12px 12px 0px 0px;
-        background-image: url('images/image-product-desktop.jpg');
+        background-image: url('images/image-product-mobile.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
