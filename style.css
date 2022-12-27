@@ -1,7 +1,7 @@
 :root {
     --gry: hsl(228, 12%, 48%); /* Dark grayish blue */
     --cyn: hsl(158, 36%, 37%); /* Dark cyan */
-    --white: hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%); /* White */
 }
 
 * {
@@ -12,16 +12,17 @@
     padding: 0;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
+    gap: 22px;
     background-color: hsl(30, 38%, 92%);
     align-items: center;
     justify-content: center;
+    padding: 18px;
+    transition: none !important;
 }
 
 .cntnr {
@@ -37,9 +38,11 @@ body {
     flex: 1 1 0px;
 }
 
-.lft img {
-    height: 100%;
+.lft {
     border-radius: 12px 0px 0px 12px;
+    background-image: url('images/image-product-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .rght {
@@ -107,8 +110,39 @@ button {
     border-radius: 8px;
     padding: 16px;
     width: 100%;
+    transition: 0.6s;
 }
 
 button:hover {
     background-color: hsl(156, 42%, 18%);
+    transition: 0.6s;
+}
+
+@media screen and (max-width: 620px) { 
+
+    body {
+        gap: 14px;
+    }
+
+    .cntnr {
+        flex-direction: column;
+        width: 340px;
+        height: 610px;
+    }
+
+    .lft {
+        border-radius: 12px 12px 0px 0px;
+        background-image: url('images/image-product-desktop.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .rght {
+        padding: 20px;
+    }
+
+    .rght h2, .rght h1, .rght p, .prc {
+        margin-bottom: 14px;
+    }
+    
 }
